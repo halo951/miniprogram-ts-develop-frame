@@ -1,5 +1,0 @@
-<view class="user-avatar {{ border ? 'border' : '' }} {{ mask ? 'mask' : '' }}" style="--size--:{{size}};--bg--:{{bg}}">
-  <image class="img" wx:if="{{single && user.avatarUrl}}" src="{{user.avatarUrl}}" />
-  <image class="img" wx:elif="{{avatar}}" src="{{avatar}}" />
-  <view wx:else class="iconfont icon-user" />
-</view>

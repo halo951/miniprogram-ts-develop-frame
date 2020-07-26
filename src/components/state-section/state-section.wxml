@@ -1,1 +1,0 @@
-<view class="state {{anim}}" wx:if="{{ anim != 'hide' }}">{{ state || '' }}</view>
