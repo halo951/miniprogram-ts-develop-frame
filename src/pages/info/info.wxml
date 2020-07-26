@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="panel">
+    <view class="rank-index">{{rankIndex}}</view>
+    <view class="user-avatar">
+      <image class="icon" src="/assets/imgs/info/icon-top-{{rankIndex}}.png" />
+      <user-avatar class="user-avatar" avatar="{{avatar}}" />
+    </view>
+    <view class="userinfo">
+      <view class="nickname">{{nickname}}</view>
+      <view class="score">积分：{{score}}</view>
+    </view>
+    <view class="me">
+      <view class="identity">{{identity}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,129 @@
+@import (reference) "../../normal.less";
+
+@font-face {
+  font-family: sys;
+  src: local('Arial');    
+  unicode-range: U+0020-007F;
+}
+
+.module-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  .mask();
+  .icon {
+    width: 189rpx;
+    height: 215rpx;
+    position: absolute;
+    left: calc(~"(100% - 189rpx) * 0.5");
+    top: calc(~"(100% - 215rpx) * 0.5 - 18rpx");
+    .icon-bottle {
+      @fill();
+    }
+    .star {
+      width: 82rpx;
+      height: 81rpx;
+      position: absolute;
+      left: 45rpx;
+      top: 92rpx;
+    }
+    .word {
+      width: 100%;
+      height: 36rpx;
+      position: absolute;
+      top: calc(~"100% + 0.5em");
+      left: 0;
+      font-style: oblique;
+      display: flex;
+      justify-content: center;
+      .txt {
+        font-size: 36rpx;
+        font-weight: bold;
+        font-family: sys , "HappyZcool-2016";
+        text-indent: 0.05em;
+        color: #ffd400;
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mask {
+  animation: fadeIn 0.3s linear forwards;
+}
+.icon {
+  animation: fadeIn 0.3s linear forwards;
+}
+@keyframes ani-bottle {
+  0%,
+  100% {
+    filter: drop-shadow(2px 2px 4px #06eff7);
+  }
+  50% {
+    filter: drop-shadow(2px 2px 12px #06eff7);
+  }
+}
+@keyframes ani-star {
+  0%,
+  100% {
+    filter: drop-shadow(0px 0px 0px #ffeb8f) blur(0px);
+  }
+  50% {
+    filter: drop-shadow(0 0 9px #ffeb8f) blur(1px);
+  }
+}
+@keyframes ani-word {
+  0%,
+  100% {
+    text-shadow: 0 0 2rpx #2cbbf3, 0 0 4rpx #19b2ee, 0 0 6rpx #60c7f1, 0 0 8rpx #60c7f1, 0 0 10rpx #60c7f1,
+      0 0 12rpx #65ccf5;
+  }
+  50% {
+    text-shadow: 0 0 4rpx #2cbbf3, 0 0 8rpx #19b2ee, 0 0 12rpx #60c7f1, 0 0 16rpx #60c7f1, 0 0 20rpx #60c7f1,
+      0 0 24rpx #65ccf5, 0 0 32rpx #81d6f8;
+  }
+}
+.icon-bottle {
+  animation: ani-bottle 1s linear infinite;
+}
+.star {
+  animation: ani-star 1s linear infinite;
+}
+.word {
+  animation: ani-word 1s linear infinite;
+}
+
+.gen-ani(6);
+
+.gen-ani(@n, @i: 1) when (@i =< @n) {
+  @str: "@keyframes @ani-name { #s,#e { transform:scaleY(1); color:#ffd400; } #c { transform:scaleY(1.2); color:#ffffff; } }";
+  @ani-name: e(replace("ani-t-#i", "#i", @i));
+  @start: @i * 10%;
+  @center: @i * 10% + 10%;
+  @end: @i * 10% + 20%;
+  @a: replace(@str, "@ani-name", @ani-name);
+  @b: replace(@a, " #s", @start);
+  @c: replace(@b, "#c", @center);
+  @d: replace(@c, "#e", @end);
+  e(@d);
+  .txt:nth-child(@{i}) {
+    animation: @ani-name 5s linear infinite;
+    transform-origin: center bottom;
+  }
+  .gen-ani(@n, (@i + 1));
+}
+.gen-ani(8);
+
+.loading-fade-out{
+  animation-delay: 1s;
+  animation: fadeOut 0.3s linear forwards;
+}

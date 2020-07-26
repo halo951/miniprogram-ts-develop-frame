@@ -1,0 +1,56 @@
+@import (css) "./iconfont.wxss";
+@import (reference) "./normal.less";
+@import (reference) "./color.less";
+// 基础样式
+page {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+  .container {
+    overflow: auto;
+  }
+}
+/**
+ * 点击效果
+ */
+.btn-hover {
+  transform-origin: center;
+  transform: scale(0.93);
+}
+.blur {
+  .decorate {
+    filter: blur(4px);
+  }
+}
+.disable-anim {
+  animation: none;
+}
+.hide {
+  display: none !important;
+}
+.btn-clean-default {
+  // origin
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  text-align: center;
+  text-decoration: none;
+  line-height: none;
+  border-radius: none;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: transparent;
+  // clean
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+
+  &::after {
+    border: none;
+  }
+}
+
+.scroll-bar();

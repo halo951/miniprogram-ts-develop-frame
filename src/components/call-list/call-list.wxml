@@ -1,0 +1,23 @@
+<view class="call-list" wx:if="{{active}}">
+  <view class="mask" />
+  <view class="panel">
+    <image class="bg" src="/assets/imgs/call-list/panel.png" />
+    <view class="btn-close" hover-class="btn-hover" bind:tap="onTap" data-method="close">
+      <image class="bg" src="/assets/imgs/call-list/btn-close.png" />
+    </view>
+    <view class="section">
+      <view class="rank-list">
+        <block wx:for="{{rankList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="rank-item">
+            <user-avatar class="user-avatar" size="91rpx" border avatar="{{item.user.avatar}}" />
+            <view class="nickname">{{item.user.nickname}}</view>
+            <view class="btn-call" hover-class="btn-hover" bind:tap="onTap" data-method="choice" data-item="{{item}}">
+              <image class="bg" src="/assets/imgs/call-list/btn-call.png" />
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="rank-mask" />
+    </view>
+  </view>
+</view>

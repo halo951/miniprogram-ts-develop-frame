@@ -1,0 +1,211 @@
+@import (reference) "../../normal.less";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  .mask {
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: 664rpx;
+
+    @tl();
+    overflow: hidden;
+    .zz {
+      @size: 2100rpx;
+      width: @size;
+      height: @size;
+      border-radius: 100%;
+      background: #fa9625;
+      position: absolute;
+      top: @size * -1 + 664rpx;
+      left: calc((100% - @size) * 0.5);
+      box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
+    }
+  }
+  .top {
+    position: relative;
+    @fill();
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    & > .user-avatar {
+      margin-top: 70rpx;
+      animation: fadeIn 0.5s linear forwards;
+    }
+
+    .money-line {
+      width: 100%;
+      height: 66rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40rpx;
+      .lab {
+        width: 50rpx;
+        height: 50rpx;
+        font-size: 24rpx;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+        margin-right: 40rpx;
+      }
+      .flower {
+        width: 52rpx;
+        height: 57rpx;
+        transform: scale(1.2);
+        margin-right: 20rpx;
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+      }
+      .val {
+        margin-left: 20rpx;
+        font-size: 79rpx;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+        color: rgb(253, 253, 253);
+      }
+    }
+    .btn-withdrawal {
+      width: 363rpx;
+      height: 116rpx;
+      margin-top: 50rpx;
+      transform-origin: center top;
+      .btn-in {
+        @fill();
+        animation: flipInX 1s linear forwards;
+        .bg {
+          @fill();
+        }
+        .info {
+          @fill();
+          @tl();
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 46rpx;
+          font-weight: 800;
+          color: #8e545c;
+          margin-top: -14rpx;
+          letter-spacing: 0.3em;
+        }
+      }
+    }
+    .btn-detail {
+      width: 116rpx;
+      height: 109rpx;
+      position: absolute;
+      right: 0;
+      top: 190rpx;
+      transform-origin: right center;
+      .bg {
+        @fill();
+        animation: fadeInRight 0.3s linear forwards;
+      }
+    }
+    .withdrawal-rank {
+      width: 750rpx;
+      height: auto;
+      position: absolute;
+      left: 0;
+      top: 495rpx;
+      .line {
+        width: 100%;
+        height: 40rpx;
+        margin-top: 55rpx;
+        padding-left: 70rpx;
+        font-size: 30rpx;
+        font-family: PingFang SC;
+        font-weight: 800;
+        color: rgba(128, 128, 128, 1);
+      }
+      .count-list {
+        width: 586rpx;
+        height: 640rpx;
+        overflow-y: auto;
+        margin: 0 auto;
+        margin-top: 50rpx;
+
+        margin-top: 10rpx;
+        position: relative;
+        .item {
+          width: 100%;
+          height: 130rpx;
+          position: relative;
+          border-bottom: 1px solid #ccc;
+          .user-avatar {
+            width: 90rpx;
+            height: 90rpx;
+            position: absolute;
+            left: 0;
+            bottom: 20rpx;
+            transform: translateX(0%) translateY(0);
+          }
+          .nickname {
+            font-size: 30rpx;
+            font-family: PingFang SC;
+            font-weight: 800;
+            color: rgba(128, 128, 128, 1);
+            position: absolute;
+            top: 25rpx;
+            left: 40%;
+          }
+          .total-call {
+            padding: 0.2em 0.7em;
+            background: #fff100;
+            font-size: 26rpx;
+            font-family: PingFang SC;
+            font-weight: 800;
+            color: rgba(184, 61, 28, 1);
+            position: absolute;
+            bottom: 6rpx;
+            left: 215rpx - 70rpx;
+          }
+          .total-money {
+            position: absolute;
+            top: 25rpx;
+            right: 0rpx;
+            font-size: 13px;
+            font-family: PingFang SC;
+            font-weight: 600;
+            color: #808080;
+          }
+          .last-time {
+            position: absolute;
+            bottom: 5rpx;
+            right: 0rpx;
+            font-size: 10px;
+            font-family: PingFang SC;
+            font-weight: 600;
+            color: #808080;
+          }
+        }
+      }
+    }
+    .no-data {
+      width: 750rpx;
+      height: auto;
+      position: absolute;
+      left: 0;
+      top: 464rpx + 140rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;
+      .icon-wushuju {
+        font-size: 82rpx;
+        margin: 10rpx auto;
+      }
+      .content {
+        font-size: 24rpx;
+      }
+    }
+  }
+}
+
+.btn-hover();

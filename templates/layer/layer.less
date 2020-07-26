@@ -1,0 +1,21 @@
+@import (reference) "../../normal.less";
+
+.BASE_FILENAME {
+  position: fixed;
+  z-index: 8;
+  @f11();
+  .mask();
+  .panel {
+    position: absolute;
+    z-index: 1;
+    .bg {
+      @fill();
+    }
+    .section {
+      position: absolute;
+      z-index: 1;
+      @tl();
+      @fill();
+    }
+  }
+}

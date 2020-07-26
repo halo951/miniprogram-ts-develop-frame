@@ -1,0 +1,15 @@
+<!-- 锚点模块容器 -->
+<view class="module-container {{anim}}" data-anim="{{anim}}" bind:animationend="onAnimationEnd" wx:if="{{active}}">
+  <!-- 蒙层 -->
+  <view class="mask" wx:if="{{mask}}"></view>
+  <view class="icon">
+    <!-- 瓶子 -->
+    <image class="icon-bottle" src="/assets/imgs/loading/icon-bottle.png" />
+    <image class="star" src="/assets/imgs/loading/icon-star.png" />
+    <view class="word">
+      <block wx:for="{{word}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+        <view class="txt">{{item}}</view>
+      </block>
+    </view>
+  </view>
+</view>

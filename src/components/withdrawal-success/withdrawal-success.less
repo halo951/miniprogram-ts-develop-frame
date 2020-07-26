@@ -1,0 +1,90 @@
+@import (reference) "../../normal.less";
+
+@import (reference) "../../normal.less";
+
+.message {
+  position: fixed;
+  z-index: 9;
+  @tl();
+  @fill();
+  .mask();
+  .panel {
+    width: 750rpx;
+    height: 774rpx;
+    position: absolute;
+    left: 0;
+    top: calc((100% - 774rpx) * 0.4);
+    z-index: 1;
+    animation: bounceIn 1s linear forwards;
+    .bg {
+      @fill();
+      position: relative;
+    }
+    .content {
+      font-size: 41rpx;
+      font-family: FZCuYuan-M03S;
+      font-weight: 400;
+      color: rgba(255, 243, 215, 1);
+      width: 400rpx;
+      height: 300rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: calc((100% - 400rpx) * 0.5);
+      top: 180rpx;
+      text-align: center;
+    }
+    .code {
+      padding: 0.5em 1.5em;
+      background: #7a1b53;
+      border-radius: 10rpx;
+      box-shadow: 0 0 6rpx inset rgba(0, 0, 0, 0.3);
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      top: 440rpx;
+      transform: translateX(-50%) translateY(-50%);
+      font-size: 36rpx;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+    }
+    .btn-close {
+      width: 65rpx;
+      height: 70rpx;
+      position: absolute;
+      right: 36rpx;
+      top: 86rpx;
+    }
+    .btn-withdrawal {
+      width: 364rpx;
+      height: 150rpx;
+      position: absolute;
+      left: calc((100% - 364rpx) * 0.5);
+      top: 500rpx;
+      .btn-in {
+        @fill();
+        animation: flipInX 1s linear forwards;
+        .bg {
+          @fill();
+        }
+        .info {
+          @fill();
+          @tl();
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 46rpx;
+          font-weight: 800;
+          color: #8e545c;
+          margin-top: -14rpx;
+          letter-spacing: 0.3em;
+        }
+      }
+    }
+  }
+}
+
+.btn();

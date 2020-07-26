@@ -1,0 +1,52 @@
+{
+  "async-fun": {
+    "scope": "javascript,typescript",
+    "prefix": "async-fun",
+    "body": "async $1(){}",
+    "description": "生成异步方法"
+  },
+  "return-promise": {
+    "scope": "javascript,typescript",
+    "prefix": "return-promise",
+    "body": "return new Promise((resolve,reject)=>{});",
+    "description": "生成promise函数"
+  },
+  "return-promise-resolve": {
+    "scope": "javascript,typescript",
+    "prefix": "return-promise-resolve",
+    "body": "return new Promise( resolve => {});",
+    "description": "生成Promise.resolve函数"
+  },
+  "lifetimes": {
+    "scope": "javascript,typescript",
+    "prefix": "lifetimes",
+    "body": ["lifetimes:{attached(){},ready(){},detached(){}},"],
+    "description": "Log output to console"
+  },
+  "diable-eslint": {
+    "scope": "javascript,typescript,wxml,less",
+    "prefix": "@disable",
+    "body": "/* eslint-disable */",
+    "description": "禁用全文 eslint 检测"
+  },
+  "generate-api-url": {
+    "scope": "javascript",
+    "prefix": "@api",
+    "body": ["/** $2 */", "this.API_$1 = \"$CLIPBOARD\";"]
+  },
+  "generate-api-get-url": {
+    "scope": "javascript",
+    "prefix": "@get",
+    "body": ["/** $2 */", "this.API_GET_$1 = \"$CLIPBOARD\";"]
+  },
+  "generate=api-post-url": {
+    "scope": "javascript",
+    "prefix": "@post",
+    "body": ["/** $2 */", "this.API_POST_$1 = \"$CLIPBOARD\";"]
+  },
+  "logger-error": {
+    "scope": "typescript",
+    "prefix": "logger-error",
+    "body": "logger.error(`[fail] - $TM_FILENAME_BASE.$1()`, err);"
+  }
+}

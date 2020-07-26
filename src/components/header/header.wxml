@@ -1,0 +1,4 @@
+<view class="header" wx:if="{{title}}" style="--paddingTop--:{{paddingTop}}px;">
+  <view class="iconfont icon-back" bind:tap="back" />
+  <view class="title">{{ title }}</view>
+</view>

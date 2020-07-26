@@ -1,0 +1,5 @@
+{
+  "page": "./src/pages/",
+  "component": "./src/components/",
+  "layer": "./src/components"
+}

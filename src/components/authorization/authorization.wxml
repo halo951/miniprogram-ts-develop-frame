@@ -1,0 +1,19 @@
+<view class="authorization" wx:if="{{active}}">
+  <view class="mask" />
+  <view class="panel">
+    <!-- 关闭 -->
+    <view class="btn-close" hover-class="btn-hover" bind:tap="close">
+      <image class="bg" src="/assets/imgs/invite-confirm/btn-close.png" />
+    </view>
+    <image class="bg" src="/assets/imgs/message/msg.png" />
+    <view class="content">{{content || '需要您授权我们使用您的用户信息'}}</view>
+    <button
+      class="btn-confirm btn-clean-default"
+      hover-class="btn-hover"
+      open-type="getUserInfo"
+      bind:getuserinfo="auth"
+    >
+      <image class="bg" src="/assets/imgs/message/btn-confirm.png" />
+    </button>
+  </view>
+</view>

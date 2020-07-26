@@ -1,0 +1,75 @@
+{
+  "compilerOptions": {
+    /* 禁用 js */
+    "allowJs": false,
+    "checkJs": false,
+    /* 编译选项 */
+    "baseUrl": ".", // 解析非相对模块名的基准目录
+    "rootDir": ".", // 根目录
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "charset": "utf-8", // 字符集
+    "declaration": true, // 生成 .d.ts
+    "emitBOM": true, // 输出文件的开头加入BOM头（UTF-8 Byte Order Mark）
+    "importHelpers": false,
+    "isolatedModules": false, // 将每个文件作为单独的模块
+    "module": "ESNext", // 指定生成哪个模块系统代码
+    "moduleResolution": "Node", // 模块检索规则
+    "noEmit": false, // 不生成输出文件 (disable)
+    "preserveSymlinks": false, // 不把符号链接解析为其真实路径；将符号链接文件视为真正的文件
+    "removeComments": true, // 是否删除注释
+    "stripInternal": false, // 不对具有 /** @internal */ JSDoc注解的代码生成代码
+    "incremental": true, // 启用增量编译
+    "tsBuildInfoFile": "./logs/ts.build.log", // ts编译日志
+    /* source map */
+    "sourceMap": false, // 是否生成 sourceMap
+    // "sourceRoot":"",
+    "inlineSources": true, // 将代码与sourcemaps生成到一个文件中
+    "inlineSourceMap": true, // 整合sourcemap 到一个文件
+    /* 运行环境 */
+    "lib": ["ESNext"], // 支持库
+    "target": "ES2016", // 输出版本
+    "noLib": false, // 不包含默认的库文件（ lib.d.ts）
+    "composite": true,
+    "declarationMap": true,
+    "types": ["miniprogram-api-typings"],
+    "noResolve": false, // 不把 /// <reference``>或模块导入的文件加到编译文件列表
+    "emitDecoratorMetadata": true, // 给源码里的装饰器声明加上设计类型元数据
+    "experimentalDecorators": true, // 启用实验性的ES装饰器
+    "preserveConstEnums": false, // 编译结果是否保留 const和 enum声明
+    /* 代码风格检查 */
+    "strict": true, // 启用严格模式
+    "suppressExcessPropertyErrors": false, // 阻止对对象字面量的额外属性检查
+    "strictFunctionTypes": false, // 禁用函数参数双向协变检查
+    "strictNullChecks": false, // 使用 null 必须在属性中指示
+    "strictPropertyInitialization": false, // 确保类的非undefined属性已经在构造函数里初始化。
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+    "allowUnreachableCode": true, // 不报告执行不到的代码错误。
+    "allowUnusedLabels": true, // 不报告未使用的标签错误
+    "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用
+    "noFallthroughCasesInSwitch": true, // 报告switch语句的fallthrough错误。（即，不允许switch的case语句贯穿）
+    "noImplicitAny": false, // 在表达式和声明上有隐含的 any类型时报错
+    "noImplicitReturns": false, // 方法是否必须要有返回值
+    "noImplicitThis": false, // 是否禁用 any 类型的 this
+    "noStrictGenericChecks": false, // 是否禁用对泛型的严格检查
+    "noUnusedLocals": false, // 若有未使用的局部变量则抛错
+    "noUnusedParameters": false, // 若有未使用的参数则抛错
+    "skipDefaultLibCheck": false, // 忽略库的默认声明文件的类型检查。
+    "skipLibCheck": false, // 忽略所有的声明文件（ *.d.ts）的类型检查。
+    /* 调试相关 */
+    "traceResolution": false, // 生成模块解析日志信息
+    "diagnostics": false, // 显示调试输出
+    "extendedDiagnostics": false, // 显示详细的诊段信息
+    "pretty": true, // 给错误和消息设置样式，使用颜色和上下文
+    "preserveWatchOutput": false, // 保留watch模式下过时的控制台输出
+    "listFiles": false, // 编译过程中打印文件名
+    "listEmittedFiles": false, // 打印出编译后生成文件的名字
+    "locale": "zh-cn", // 显示错误信息时使用的语言
+    "disableSizeLimit": true, // 禁用JavaScript工程体积大小的限制
+    "noEmitOnError": false, // 报错时不生成输出文件
+    "noErrorTruncation": false // 不截短错误消息。
+  },
+  "include": ["./src/*", "./src/**/*", "./templates/**/*"],
+  "exclude": ["./src/assets"]
+}

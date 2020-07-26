@@ -1,0 +1,8 @@
+<view class="award-rule" wx:if="{{active}}" bind:tap="close">
+  <view class="mask" />
+  <view class="panel">
+    <image class="bg" src="/assets/imgs/award-rule/panel-1.png" />
+    <rich-text class="rich-text" nodes="{{info}}" space="nbsp" />
+  </view>
+  <view class="state">点击任意位置关闭</view>
+</view>

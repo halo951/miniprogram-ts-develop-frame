@@ -1,0 +1,7 @@
+<view class="$${name}" wx:if="{{active}}">
+  <view class="mask" />
+  <view class="panel">
+    <image class="bg" src="/assets/imgs/$${name}/panel.png" />
+    <view class="section"></view>
+  </view>
+</view>

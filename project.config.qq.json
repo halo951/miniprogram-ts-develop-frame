@@ -1,0 +1,34 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": [
+			{
+				"type": "folder",
+				"value": "node_modules"
+			}
+		]
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"qqappid": "[appid]",
+	"projectname": "[projectname]",
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
+	"setting": {
+		"newFeature": true,
+		"urlCheck": false,
+		"es6": true,
+		"postcss": false,
+		"minified": false,
+		"remoteDebugLogEnable": false,
+		"uploadWithSourceMap": false,
+		"nodeModules": false,
+		"autoAudits": true,
+		"uglifyFileName": true,
+		"useAlphaLib": true
+	},
+	"condition": {}
+}

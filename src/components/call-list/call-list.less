@@ -1,0 +1,68 @@
+@import (reference) "../../normal.less";
+
+.call-list {
+  position: fixed;
+  z-index: 8;
+  @f11();
+  .mask();
+  .panel {
+    width: 621rpx;
+    height: 1103rpx;
+    .center(621rpx,1103rpx);
+    .bg();
+    .btn-close {
+      width: 65rpx;
+      height: 70rpx;
+      position: absolute;
+      right: 35rpx;
+      top: 45rpx;
+      z-index: 9;
+    }
+    .section {
+      position: absolute;
+      @tl();
+      @fill();
+      z-index: 1;
+      .rank-list {
+        width: 525rpx;
+        height: 897rpx;
+        overflow: hidden;
+        overflow-y: auto;
+        position: absolute;
+        .row-center(525rpx,145rpx);
+        .rank-item {
+          margin: 0 auto;
+          width: 430rpx;
+          height: 125rpx;
+          position: relative;
+          border-bottom: 2px solid #df7b96;
+          .user-avatar {
+            width: 90rpx;
+            height: 90rpx;
+            position: absolute;
+            left: 0;
+            top: calc((100% - 90rpx) * 0.5);
+          }
+          .nickname {
+            font-size: 36rpx;
+            font-family: FZCuYuan-M03S;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+          }
+          .btn-call {
+            width: 130rpx;
+            height: 80rpx;
+            position: absolute;
+            top: calc((100% - 80rpx) * 0.5);
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.btn();

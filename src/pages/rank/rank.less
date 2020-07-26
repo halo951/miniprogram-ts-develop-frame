@@ -1,0 +1,326 @@
+@import (reference) "../../normal.less";
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f7406f;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  .top {
+    width: 750rpx;
+    height: 790rpx;
+    position: relative;
+    .bg {
+      @fill();
+      position: relative;
+      z-index: 0;
+    }
+    .rank-1 {
+      width: 214rpx;
+      height: 342rpx;
+      position: absolute;
+      left: 272rpx;
+      top: 147px;
+      z-index: 999;
+      .user-avatar {
+        position: absolute;
+        left: 50rpx;
+        top: 61rpx;
+      }
+      .nickname {
+        font-size: 23rpx;
+        font-weight: 1000;
+        color: #fff;
+        font-family: 黑体;
+        position: absolute;
+        left: 48%;
+        top: 58.5%;
+        transform: translate3D(-50%, -50%, 0);
+        overflow: hidden;
+        width: 160rpx;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .rank-2 {
+      width: 183rpx;
+      height: 300rpx;
+      position: absolute;
+      left: 33rpx;
+      top: 161px;
+      z-index: 999;
+      transform: rotate(-20deg);
+
+      .user-avatar {
+        position: absolute;
+        left: 47rpx;
+        top: 56rpx;
+      }
+      .nickname {
+        font-size: 23rpx;
+        font-weight: 1000;
+        color: #fff;
+        font-family: 黑体;
+        position: absolute;
+        left: 48%;
+        top: 58.5%;
+        transform: translate3D(-50%, -50%, 0);
+        overflow: hidden;
+        width: 160rpx;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .rank-3 {
+      width: 183rpx;
+      height: 300rpx;
+      position: absolute;
+      left: 538rpx;
+      top: 164px;
+      z-index: 999;
+      transform: rotate(14deg);
+
+      .user-avatar {
+        position: absolute;
+        left: 50rpx;
+        top: 61rpx;
+      }
+      .nickname {
+        font-size: 23rpx;
+        font-weight: 1000;
+        color: #fff;
+        font-family: 黑体;
+        position: absolute;
+        left: 48%;
+        top: 58.5%;
+        transform: translate3D(-50%, -50%, 0);
+        overflow: hidden;
+        width: 160rpx;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .end-time {
+      position: absolute;
+      z-index: 2;
+      left: 30rpx;
+      top: 23rpx;
+      padding: 9rpx 26rpx;
+      background: #81053b4d;
+      border-radius: 20rpx;
+      font-size: 24rpx;
+      font-family: Source Han Sans CN;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 1);
+    }
+    .btn-award {
+      width: 167rpx;
+      height: 70rpx;
+      position: absolute;
+      z-index: 2;
+      right: 20rpx;
+      top: 23rpx;
+      .bg {
+        @fill();
+      }
+    }
+    .rank-top {
+      position: absolute;
+      z-index: 1;
+      @fill();
+      @tl();
+      .rank-1 {
+        width: 200rpx;
+        height: 400rpx;
+        border: 1rpx solid red;
+        position: absolute;
+        left: 30%;
+        top: 35%;
+      }
+    }
+  }
+  .rank-list {
+    width: 700rpx;
+    height: 1246rpx;
+    margin: 60rpx auto;
+    margin-top: -86rpx;
+    position: relative;
+
+    .bg {
+      @fill();
+    }
+    .title {
+      width: 363rpx;
+      height: 53rpx;
+      position: absolute;
+      z-index: 1;
+      .row-center(363rpx,-43rpx);
+      .bg {
+        @fill();
+      }
+      .text {
+        @fill();
+        position: absolute;
+        @tl();
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff7f4;
+        font-size: 24rpx;
+        font-weight: bold;
+        margin-top: 3rpx;
+      }
+    }
+    .header {
+      width: calc(100% + 20rpx);
+      height: 70rpx;
+      position: absolute;
+      left: 0;
+      top: 25rpx;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 35rpx;
+      font-family: Source Han Sans CN;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 1);
+    }
+    .scroll-bar();
+    .list {
+      width: 650rpx;
+      height: 1000rpx;
+      position: absolute;
+      .row-center(650rpx,93rpx);
+      overflow-y: auto;
+      padding-top: 10rpx;
+      .rank-item {
+        margin: 0 auto;
+        width: 580rpx;
+        height: 140rpx;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        .rank-index {
+          width: 135rpx;
+          height: auto;
+          font-size: 48rpx;
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+          color: rgba(164, 164, 163, 1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-content: space-between;
+          .icon {
+            width: 27rpx;
+            height: 38rpx;
+          }
+        }
+        .rank-user {
+          width: 200rpx;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          .nickname {
+            font-size: 24rpx;
+            font-family: Source Han Sans CN;
+            font-weight: bold;
+            color: rgba(148, 148, 147, 1);
+          }
+        }
+        .rank-score {
+          font-size: 38rpx;
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+          color: rgba(148, 148, 147, 1);
+        }
+      }
+    }
+
+    .no-data {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 0;
+      top: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;
+      .icon-wushuju {
+        font-size: 82rpx;
+        margin: 10rpx auto;
+      }
+      .content {
+        font-size: 24rpx;
+      }
+    }
+    .me {
+      width: 640rpx;
+      height: 140rpx;
+      position: relative;
+      border-radius: 12rpx;
+      background: #ff667f;
+      position: absolute;
+      left: calc((100% - 640rpx) * 0.5 - 10rpx);
+      bottom: 20rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 20rpx;
+
+      .rank-index {
+        width: 120rpx;
+        height: auto;
+        font-size: 34rpx;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: 12rpx;
+        text-align: center;
+        .icon {
+          width: 27rpx;
+          height: 38rpx;
+        }
+      }
+      .rank-index-max {
+        font-size: 42rpx;
+      }
+      .rank-user {
+        width: 200rpx;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .nickname {
+          font-size: 24rpx;
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+          color: rgb(255, 255, 255);
+          margin-left: 40rpx;
+        }
+      }
+      .rank-score {
+        font-size: 48rpx;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "[bat]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "better-comments.highlightPlainText": true,
+  "docthis.authorName": "Halo",
+  "docthis.includeAuthorTag": true,
+  "docthis.includeDateTag": true,
+  "docthis.includeMemberOfOnClassMembers": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.formatOnSaveTimeout": 300,
+  "editor.hover.delay": 150,
+  "editor.minimap.enabled": true,
+  "editor.parameterHints.cycle": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.quickSuggestionsDelay": 20,
+  "editor.smoothScrolling": true,
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.maxVisibleSuggestions": 15,
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "emmet.extensionsPath": "./src/**",
+  "emmet.includeLanguages": {
+    "wxml": "html"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.enable": true,
+  "eslint.nodePath": "/node_modules",
+  "eslint.options": {
+    "eslint.options": {
+      "configFile": "./.eslintrc.js"
+    }
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.workingDirectories": ["./src"],
+  "extensions.closeExtensionDetailsOnViewChange": true,
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.js": "javascript"
+  },
+  "files.maxMemoryForLargeFilesMB": 8192,
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.autofetch": true,
+  "grunt.autoDetect": "off",
+  "html.autoClosingTags": false,
+  "html.format.enable": false,
+  "html.format.indentHandlebars": true,
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+  "minapp-vscode.disableAutoConfig": true,
+  "minapp-vscode.formatMaxLineCharacters": 120,
+  "minapp-vscode.prettyHtml": {
+    "useTabs": false,
+    "tabWidth": 2,
+    "printWidth": 120,
+    "singleQuote": false,
+    "wrapAttributes": false,
+    "sortAttributes": false
+  },
+  "minapp-vscode.pugQuoteStyle": "\"",
+  "minapp-vscode.wxmlFormatter": "prettyHtml",
+  "npm.enableScriptExplorer": true,
+  "npm.packageManager": "yarn",
+  "prettier.disableLanguages": ["*.wxml"],
+  "prettier.jsxBracketSameLine": true,
+  "prettier.printWidth": 260,
+  "relativePath.removeExtension": true,
+  "telemetry.enableTelemetry": true,
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorCustomizations": {
+    "activityBar.foreground": "#15fafa",
+    "activityBar.inactiveForeground": "#1a9eaf",
+    "activityBarBadge.foreground": "#FFF",
+    "activityBarBadge.background": "#eb6c22"
+  },
+  "workbench.editor.labelFormat": "medium",
+  "editor.formatOnSave": true,
+  "prettier.configPath": "./prettier.config.js",
+  "docthis.includeMemberOfOnInterfaceMembers": false,
+  "docthis.enableHungarianNotationEvaluation": true,
+  "docthis.inferTypesFromNames": true
+}

@@ -1,0 +1,74 @@
+{
+  "btn": {
+    "scope": "wxml,wxss",
+    "body": ["<view class=\"btn $1\" hover-class=\"btn-hover\">", "<image class=\"bg\" src=\"$2\"/>", "</view>"],
+    "prefix": "@btn",
+    "description": "按钮"
+  },
+  "png": {
+    "scope": "wxml,html",
+    "body": ["/assets/imgs/$TM_FILENAME_BASE/$1.png"],
+    "prefix": "png",
+    "description": "图片"
+  },
+  "using-component": {
+    "scope": ".wxml,html",
+    "body": ["<$1 class='$1' />"],
+    "prefix": "using-component",
+    "description": "引用组件"
+  },
+  "wxs": {
+    "scope": "wxml",
+    "prefix": "wxs",
+    "body": [
+      "<!-- wxs 不支持箭头函数,仅允许使用function -->",
+      "<wxs module=\"fn\">",
+      "\tmodule.export={\n\t\t\n};",
+      "</wxs>"
+    ],
+    "description": "wxs module"
+  },
+  "@dpr": {
+    "scope": "less",
+    "prefix": "@dpr",
+    "body": [
+      "@media screen and (-webkit-min-device-pixel-ratio: 2) {",
+      "\t/* 兼容iphone6/7/plus */",
+      "}",
+      "",
+      "@media screen and (-webkit-min-device-pixel-ratio: 2.625) {",
+      "\t/* 兼容Nexus5x */",
+      "}",
+      "",
+      "@media screen and (-webkit-min-device-pixel-ratio: 3) {",
+      "\t/* 兼容iphoneX(优先) */",
+      "}"
+    ],
+    "description": "@media dpr ."
+  },
+  "assets-path": {
+    "scope": "wxml,html",
+    "prefix": "@assets",
+    "body": "/assets/img/$TM_FILENAME_BASE"
+  },
+  "img": {
+    "scope": "wxml,html",
+    "prefix": "@img",
+    "body": "<image class=\"$1\" src=\"\" />"
+  },
+  "bg": {
+    "scope": "html",
+    "prefix": "@bg",
+    "body": "<image class=\"bg\" src=\"$1\" />"
+  },
+  "normal": {
+    "scope": "less",
+    "prefix": "@normal",
+    "body": "@import (reference) \"../../normal.less\";"
+  },
+  "flex-center": {
+    "scope": "less",
+    "prefix": "flex-center",
+    "body": ["display: flex;", "justify-content: center;", "align-items: center;"]
+  }
+}

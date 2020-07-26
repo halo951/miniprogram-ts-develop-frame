@@ -1,0 +1,11 @@
+<view class="gift">
+  <image class="dan-bottom" src="/assets/imgs/gift-anim/dan-bottom.png" />
+  <block wx:if="{{active == 0}}">
+    <image class="dan-close" src="/assets/imgs/gift-anim/dan-close.png" />
+  </block>
+  <block wx:else>
+    <image class="dan-open-bottom" src="/assets/imgs/gift-anim/dan-open-bottom.png" />
+    <image class="dan-open-top" src="/assets/imgs/gift-anim/dan-open-top.png" />
+  </block>
+  <image class="hammer {{active == 0 ?'r':'l'}}" src="/assets/imgs/gift-anim/hammer.png" />
+</view>

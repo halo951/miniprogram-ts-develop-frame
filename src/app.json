@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/detail/detail",
+    "pages/friend/friend",
+    "pages/index/index",
+    "pages/info/info",
+    "pages/rank/rank",
+    "pages/user/user",
+    "pages/withdrawal/withdrawal"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "[project]",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {},
+  "debug": false,
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#727272",
+    "selectedColor": "#FF2A84",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/icon-nav-index.png",
+        "selectedIconPath": "/static/icon-nav-index-active.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "榜单",
+        "iconPath": "/static/icon-nav-rank.png",
+        "selectedIconPath": "/static/icon-nav-rank-active.png"
+      },
+      {
+        "pagePath": "pages/friend/friend",
+        "text": "详情",
+        "iconPath": "/static/icon-nav-friend.png",
+        "selectedIconPath": "/static/icon-nav-friend-active.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,181 @@
+@import (reference) "../../normal.less";
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #cd153c;
+  .panel {
+    width: 720rpx;
+    height: 1108rpx;
+    margin: 0 auto;
+    margin-top: 130rpx;
+    margin-bottom: 60rpx;
+    position: relative;
+    .bg {
+      @fill();
+    }
+    & > .bg {
+      filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    }
+    .nav-menu {
+      width: 582rpx;
+      height: 70rpx;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: flex-end;
+      position: absolute;
+      .row-center(582rpx,-70rpx);
+      .nav {
+        width: 186rpx;
+        height: 70rpx;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: column nowrap;
+        position: relative;
+        .bg {
+          position: absolute;
+          @tl();
+          @fill();
+          z-index: 0;
+        }
+        .title {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          height: 28rpx;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 28rpx;
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+          color: rgba(255, 255, 255, 1);
+        }
+        .val {
+          position: relative;
+          z-index: 2;
+          width: 100%;
+          height: 26rpx;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 26rpx;
+          font-family: Source Han Sans CN;
+          font-weight: blod;
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+      .nav-active {
+        transform-origin: center bottom;
+        transform: scaleY(1.1);
+        .title,
+        .val {
+          color: #ab2c46;
+        }
+      }
+    }
+    .log-list {
+      width: 647rpx;
+      height: calc(100% - 80rpx);
+
+      position: absolute;
+      z-index: 1;
+      .row-center(647rpx,20rpx);
+      overflow-y: auto;
+      .item-0,
+      .item-1 {
+        width: 647rpx;
+        height: 173rpx;
+        margin: 0 auto;
+        position: relative;
+        .bg {
+          @fill();
+        }
+        .left {
+          width: 90rpx;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+          position: absolute;
+          left: 50rpx;
+          top: 0rpx;
+
+          .user-avatar {
+            width: 90rpx;
+            height: 90rpx;
+            margin-top: -16rpx;
+          }
+          .tag {
+            margin-top: 11rpx;
+            padding: 0.3em 1em;
+            background: rgb(163, 16, 60);
+            border-radius: 12rpx;
+            color: #fff;
+            font-size: 18rpx;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+        }
+        .rich-text {
+          width: 420rpx;
+          height: 90rpx;
+          position: absolute;
+          left: 170rpx;
+          top: calc((100% - 90rpx) * 0.5 - 6rpx);
+
+          .p {
+            width: 100%;
+            height: 38rpx;
+            font-size: 32rpx;
+            font-family: Source Han Sans CN;
+            font-weight: bold;
+            color: rgba(201, 98, 42, 1);
+          }
+        }
+      }
+      .load-many {
+        display: inline;
+        padding: 0.5em 1em;
+        margin: 40rpx auto;
+        font-size: 1em;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        border-radius: 4px;
+        border: 2px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .no-data {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 0;
+      top: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;
+      .icon-wushuju {
+        font-size: 82rpx;
+        margin: 10rpx auto;
+        color: #fff;
+      }
+      .content {
+        font-size: 24rpx;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.disable {
+  filter: grayscale(100%);
+}

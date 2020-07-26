@@ -1,0 +1,21 @@
+<view class="red-packets" wx:if="{{active}}">
+  <view class="mask" />
+  <view class="panel">
+    <image class="bg" src="/assets/imgs/red-packets/panel.png" />
+    <view class="users">
+      <view class="t" wx:if="{{ target }}">
+        <user-avatar class="user-avatar" border="true" mask="true" size="130rpx" avatar="{{ target.avatar }}" />
+        <view class="tag" wx:if="{{ identity == 'root' }}">{{target.nickname}}</view>
+      </view>
+      <view class="u" wx:else>
+        <user-avatar class="user-avatar" border="true" mask="true" size="130rpx" single />
+        <view class="tag">{{user.nickName || user.nickname}}</view>
+      </view>
+    </view>
+    <view class="content">{{content}}</view>
+    <view class="btn" hover-class="btn-hover" bind:tap="next">
+      <image wx:if="{{ type == 'parent' }}" class="bg" src="/assets/imgs/red-packets/btn-confirm.png" />
+      <image wx:else class="bg" src="/assets/imgs/red-packets/btn-receive.png" />
+    </view>
+  </view>
+</view>

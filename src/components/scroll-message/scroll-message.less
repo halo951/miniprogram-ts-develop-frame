@@ -1,0 +1,48 @@
+@import (reference) "../../normal.less";
+
+@keyframes contentR2L {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.scroll-message {
+  width: 100vw;
+  height: 50rpx;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  top: var(--top--, 0);
+  z-index: 99;
+  animation: fadeInDown 0.3s linear forwards;
+  display: flex;
+  flex-flow: row nowrap;
+  .icon {
+    position: absolute;
+    left: 20rpx;
+    top: calc((100% - 23rpx) * 0.5);
+    width: 27rpx;
+    height: 23rpx;
+  }
+  .info {
+    width: calc(100% - 50rpx);
+    height: 100%;
+    overflow: hidden;
+    margin-left: 20rpx + 30rpx;
+    .content {
+      width: var(--width--, 100%);
+      height: 50rpx;
+      line-height: 50rpx;
+      color: #fff;
+      font-size: 22rpx;
+    }
+    .anim {
+      animation-name: contentR2L;
+      animation-timing-function: linear;
+      animation-duration: var(--duration--, 3s);
+      animation-fill-mode: forwards;
+    }
+  }
+}

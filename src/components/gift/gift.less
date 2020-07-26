@@ -1,0 +1,62 @@
+@import (reference) "../../normal.less";
+
+.gift {
+  width: 370rpx;
+  height: 380rpx;
+  position: relative;
+  margin: 0 auto;
+  .dan-bottom {
+    width: 362rpx;
+    height: 111rpx;
+    position: absolute;
+    bottom: 0;
+    left: 4rpx;
+  }
+  .dan-close {
+    width: 238rpx;
+    height: 304rpx;
+    position: absolute;
+    z-index: 1;
+    left: calc((100% - 238rpx) * 0.5);
+    bottom: 50rpx;
+  }
+  .dan-open-bottom {
+    width: 238rpx;
+    height: 220rpx;
+    position: absolute;
+    z-index: 1;
+    left: calc((100% - 238rpx) * 0.5);
+    bottom: 50rpx;
+  }
+  .dan-open-top {
+    width: 238rpx;
+    height: 180rpx;
+    position: absolute;
+    z-index: 1;
+    left: calc((100% - 238rpx) * 0.5);
+    top: 0;
+    transform: rotate(-60deg) translate3d(-30%, -50%);
+    transform-origin: left bottom;
+  }
+  .hammer {
+    width: 203rpx;
+    height: 154rpx;
+    position: absolute;
+    right: -60rpx;
+    top: 40rpx;
+    z-index: 2;
+    transform-origin: right bottom;
+
+    transform: rotate(30deg);
+    @keyframes cz {
+      0%,
+      100% {
+        transform: rotate(45deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+    }
+    animation: cz 0.6s linear infinite;
+  }
+}
