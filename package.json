@@ -28,7 +28,7 @@
     "@types/lodash": "^4.14.149",
     "array-grouping": "^1.0.7",
     "autoprefixer": "^9.7.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.0.3",
     "babel-preset-minify": "^0.5.1",
     "cheerio": "^1.0.0-rc.3",
